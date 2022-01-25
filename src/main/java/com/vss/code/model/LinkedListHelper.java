@@ -20,7 +20,7 @@ public class LinkedListHelper {
 
     private static ListNodeInfo getListNodeInfo(final int nodeCount, final boolean sort) {
         Random random = new Random();
-        final IntStream intStream = random.ints(nodeCount, 1, nodeCount * 3);
+        final IntStream intStream = random.ints(nodeCount, 1, nodeCount * 11);
         final AtomicReference<ListNode> head = new AtomicReference<>();
         final AtomicReference<ListNode> current = new AtomicReference<>();
         final AtomicInteger count = new AtomicInteger();
@@ -45,7 +45,7 @@ public class LinkedListHelper {
         final ListNode node = new ListNode(val);
         if(head.get() == null) {
             head.set(node);
-        }else {
+        } else {
             current.get().setNext(node);
         }
         current.set(node);

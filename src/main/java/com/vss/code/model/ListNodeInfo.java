@@ -30,18 +30,4 @@ public class ListNodeInfo {
         return sorted;
     }
 
-    public void print() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("[");
-        ListNode next = head.getNext();
-        while(next != null) {
-            sb.append(next.getVal());
-            next = next.getNext();
-            if (next != null) {
-                sb.append(",");
-            }
-        }
-        sb.append("]");
-        System.out.println(sb);
-    }
 }

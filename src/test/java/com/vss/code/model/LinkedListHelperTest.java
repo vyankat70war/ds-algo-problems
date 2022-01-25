@@ -28,8 +28,8 @@ public class LinkedListHelperTest {
 
     @Test
     public void testPrintList() {
-        final ListNodeInfo listInfo = LinkedListHelper.getSortedList(10000);
-        listInfo.print();
+        final ListNodeInfo listInfo = LinkedListHelper.getSortedList(5);
+        listInfo.getHead().print();
         Assert.assertNotNull(listInfo);
     }
 }

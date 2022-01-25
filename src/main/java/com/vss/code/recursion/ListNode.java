@@ -33,11 +33,11 @@ public class ListNode {
     public void print() {
         StringBuilder sb = new StringBuilder();
         sb.append("[");
-        ListNode next = this.getNext();
-        while(next != null) {
-            sb.append(next.getVal());
-            next = next.getNext();
-            if (next != null) {
+        ListNode current = this;
+        while(current != null) {
+            sb.append(current.getVal());
+            current = current.getNext();
+            if (current != null) {
                 sb.append(",");
             }
         }
