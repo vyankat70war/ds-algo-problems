@@ -29,4 +29,19 @@ public class ListNode {
         this.next = next;
         return next;
     }
+
+    public void print() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        ListNode next = this.getNext();
+        while(next != null) {
+            sb.append(next.getVal());
+            next = next.getNext();
+            if (next != null) {
+                sb.append(",");
+            }
+        }
+        sb.append("]");
+        System.out.println(sb);
+    }
 }

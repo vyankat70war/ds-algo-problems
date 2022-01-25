@@ -4,6 +4,7 @@ package com.vss.code.model;
 import com.vss.code.recursion.ListNode;
 
 import java.util.Random;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.IntStream;
 
@@ -22,25 +23,31 @@ public class LinkedListHelper {
         final IntStream intStream = random.ints(nodeCount, 1, nodeCount * 3);
         final AtomicReference<ListNode> head = new AtomicReference<>();
         final AtomicReference<ListNode> current = new AtomicReference<>();
-
+        final AtomicInteger count = new AtomicInteger();
         if (sort) {
             intStream.sorted()
-                    .forEach(val -> addToList(head, current, val));
+                    .forEach(val -> {
+                        count.getAndIncrement();
+                        addToList(head, current, val);
+                    });
         } else {
             intStream
-                    .forEach(val -> addToList(head, current, val));
+                    .forEach(val -> {
+                        count.getAndIncrement();
+                        addToList(head, current, val);
+                    });
         }
-        return new ListNodeInfo(head.get(), current.get(), nodeCount);
+        System.out.println(count.get());
+        return new ListNodeInfo(head.get(), current.get(), count.get());
     }
 
     private static void addToList(final AtomicReference<ListNode> head, final AtomicReference<ListNode> current, final int val) {
         final ListNode node = new ListNode(val);
         if(head.get() == null) {
-            current.set(node);
-            head.set(current.get());
+            head.set(node);
         }else {
             current.get().setNext(node);
-            current.set(node);
         }
+        current.set(node);
     }
 }
