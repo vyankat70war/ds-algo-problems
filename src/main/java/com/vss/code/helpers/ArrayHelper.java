@@ -20,4 +20,23 @@ public class ArrayHelper {
         else ints = intStream.toArray();
         return ints;
     }
+
+    public static void print(final int[] arr) {
+        if (arr == null) {
+            System.out.println("[]");
+            return;
+        }
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0, arrLength = arr.length; i < arrLength; i++) {
+            final int value = arr[i];
+            sb.append(value);
+            if (i == arrLength - 1) {
+                continue;
+            }
+            sb.append(",");
+        }
+        sb.append("]");
+        System.out.println(sb);
+    }
 }
