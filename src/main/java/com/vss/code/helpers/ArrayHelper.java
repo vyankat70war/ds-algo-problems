@@ -1,4 +1,4 @@
-package com.vss.code.model;
+package com.vss.code.helpers;
 
 import java.util.Random;
 import java.util.stream.IntStream;

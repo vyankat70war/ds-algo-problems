@@ -1,6 +1,7 @@
-package com.vss.code.model;
+package com.vss.code.helpers;
 
 
+import com.vss.code.model.ListNodeInfo;
 import com.vss.code.recursion.ListNode;
 
 import java.util.Random;
