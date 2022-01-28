@@ -1,6 +1,7 @@
 package com.vss.code.recursion;
 
 import com.vss.code.helpers.LinkedListHelper;
+import com.vss.code.model.ListNode;
 import org.junit.Test;
 
 public class SwapNodesInPairsTest{

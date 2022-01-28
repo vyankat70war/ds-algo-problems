@@ -1,7 +1,5 @@
 package com.vss.code.model;
 
-import com.vss.code.recursion.ListNode;
-
 public class ListNodeInfo {
     private ListNode head;
     private ListNode last;

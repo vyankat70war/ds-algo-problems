@@ -1,5 +1,7 @@
 package com.vss.code.recursion;
 
+import com.vss.code.model.ListNode;
+
 public class SwapNodesInPairs {
     public ListNode swapPairs(ListNode head) {
         if (head == null || head.getNext() == null) {

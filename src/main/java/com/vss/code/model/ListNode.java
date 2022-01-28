@@ -1,4 +1,4 @@
-package com.vss.code.recursion;
+package com.vss.code.model;
 
 //  Definition for singly-linked list.
 public class ListNode {

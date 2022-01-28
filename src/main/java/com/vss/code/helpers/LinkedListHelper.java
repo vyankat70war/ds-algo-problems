@@ -1,8 +1,8 @@
 package com.vss.code.helpers;
 
 
+import com.vss.code.model.ListNode;
 import com.vss.code.model.ListNodeInfo;
-import com.vss.code.recursion.ListNode;
 
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
