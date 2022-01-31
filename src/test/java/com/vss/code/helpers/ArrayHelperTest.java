@@ -1,6 +1,5 @@
-package com.vss.code.model;
+package com.vss.code.helpers;
 
-import com.vss.code.helpers.ArrayHelper;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

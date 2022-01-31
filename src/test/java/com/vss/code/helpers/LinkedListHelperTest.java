@@ -1,7 +1,7 @@
-package com.vss.code.model;
+package com.vss.code.helpers;
 
 
-import com.vss.code.helpers.LinkedListHelper;
+import com.vss.code.model.ListNodeInfo;
 import org.junit.Assert;
 import org.junit.Test;
 
