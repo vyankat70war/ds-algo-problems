@@ -38,7 +38,6 @@ public class LinkedListHelper {
                         addToList(head, current, val);
                     });
         }
-        System.out.println(count.get());
         return new ListNodeInfo(head.get(), current.get(), count.get());
     }
 
